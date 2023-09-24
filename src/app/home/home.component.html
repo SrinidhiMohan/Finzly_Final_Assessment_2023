@@ -1,0 +1,97 @@
+<h2>Bharat Bijili Coorporation</h2>
+<div class="container">
+    <div class="row">
+      <div class = "col">
+        <h3>Register new consumer</h3>
+        <form #f="ngForm">
+            {{f.value | json}}
+            <div class = "form-group">
+               <label for="customername">Customer Name: </label>
+               <input ngModel name ="customername" type="text" placeholder="Enter your name"
+               #customername="ngModel" class="form-control" required>
+
+               <div class="alert alert-danger" *ngIf="customername.touched">
+               **Kindly enter your name
+               </div>
+            </div>
+            <div class ="form-group">
+               <label for="houseno">House number: </label>
+               <input ngModel name ="houseno" type="number" placeholder="Enter your house number"
+               #houseno="ngModel" class="form-control" required><br><br>
+
+               <div class="alert alert-danger" *ngIf="houseno.touched">
+                **Kindly enter house number
+                </div>
+            </div>
+            <div class="form-group">
+               <label for="address">Address: </label>
+               <input ngModel name ="address" type="text" placeholder="Enter your address"
+               #address="ngModel" class="form-control" required><br><br>
+               <div class="alert alert-danger" *ngIf="address.touched">
+                **Kindly enter address
+                </div>
+            </div>
+            <div class ="form-group">
+               <label for="pincode">Pincode: </label>
+               <input ngModel name ="pincode" type="number" placeholder="Enter your pincode"
+               #pincode="ngModel" class="form-control" minlength="6" required><br><br>
+
+               <div class="alert alert-danger" *ngIf="pincode.touched">
+                **Kindly enter pincode
+                </div>
+            </div>    
+                <div class = "form-group">
+                    <label for="state">State:</label>
+                    <select ngModel name="state" id="state" class="form-control" required>
+                    <option *ngFor="let item of state" [value]="item.sname">{{item.sname}}</option>
+                    </select>
+
+                    <!-- <div class="alert alert-danger" *ngIf="state.touched">
+                        **Kindly select a state
+                        </div> -->
+                </div>
+                <br><br>
+                <div class="form-group">
+                    <label for="emailid">Email Id:</label>
+                    <input ngModel #emailid="ngModel" type="email" name ="emailid" id="emailid" 
+                    class="form-control" placeholder="Enter your email id" 
+                    [pattern]="EMAIL_PATTERN" required>
+
+                    <div class="alert alert-danger"
+                      *ngIf="emailid.touched && !emailid.valid"
+                      >Please Enter the email id
+                         <div *ngIf="emailid.errors?.pattern">
+                            Please enter a valid mail id.
+                         </div>
+                     </div>
+                </div>
+               <br><br>
+               <button class="btn btn-outline-success" [disabled]="!f.valid">Register</button>
+        </form>
+    </div>
+        <h3>Login</h3>
+        <form #f2="ngForm">
+            <div class = "form-group">
+               <label for="cid">Customer Id: </label>
+               <input ngModel name ="cid" type="text" placeholder="Enter customer id"
+               #cid="ngModel" class="form-control" required><br><br>
+
+               <div class="alert alert-danger" *ngIf="cid.touched">
+               **Kindly enter your customer id
+               </div>
+            </div>
+            <div class="form-group">
+               <label for="otp">OTP: </label>
+               <input ngModel name ="otp" type="text" placeholder="Enter your otp"
+               #otp="ngModel" class="form-control" required><br><br>
+               <div class="alert alert-danger" *ngIf="otp.touched">
+                **Kindly enter your otp
+                </div>
+            </div>
+            <br><br>
+               <button class="btn btn-outline-success" [disabled]="!f2.valid">Login</button>
+        </form>
+
+    </div>
+
+</div>
