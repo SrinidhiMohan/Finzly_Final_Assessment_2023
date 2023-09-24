@@ -1,5 +1,5 @@
 # Finzly_Final_Assessment_2023
-                                                                      ****Developer 2: Customer-Facing Utility Bill Payment Application****
+****Developer 2: Customer-Facing Utility Bill Payment Application****
 The Customer-Facing Utility Bill Payment Application is designed to provide an easy and secure
 platform for customers to pay their utility bills online. This document outlines the requirements for
 the application, including success and failure messages, error handling, and validations. This could be
