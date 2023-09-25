@@ -1,0 +1,24 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Payment Information</title>
+</head>
+<body>
+    <h1>Payment Information</h1>
+    
+    <form #pay="ngForm">
+        <label for="cid">Customer ID:</label>
+        <input  [(ngModel)]="obj.cid" type="text" id="cid" name="cid" placeholder="Enter Customer ID"><br><br>
+        
+        <label for="bid">Billing ID:</label>
+        <input [(ngModel)]="obj.bid" type="text" id="bid" name="bid" placeholder="Enter Billing ID"><br><br>
+        
+        <label for="cardnumber">Card Number:</label>
+        <input [(ngModel)]="obj.cardnumber" type="text" id="cardnumber" name="cardnumber" placeholder="Enter Card Number"><br><br>
+        
+        <input type="submit" (click)="payonline()">
+    </form>
+
+   

@@ -1,0 +1,324 @@
+<app-header></app-header>
+<h2 style="text-align: center;">My Details</h2>
+<table class="table table-bordered table-hover">
+
+    <thead>
+        <th>Customer ID</th>
+        <th>Name</th>
+        <th>Address</th>
+        <th>Email</th>
+        <th>Mobile</th>
+    </thead>
+    <tbody>
+        <tr *ngFor="let item of customerDetails ">
+            
+            <td>{{item.cid}}</td>
+            <td>{{item.customername}}</td>
+            <td>{{item.address}}</td>
+            <td>{{item.emailid}}</td>
+            <td>{{item.mobileno}}</td>
+    </tr>
+</tbody>        
+</table>  
+
+<br><br>
+
+<h2 style="text-align: center;">PENDING BILLS</h2>
+
+<table class="table table-bordered table-hover">
+
+    <thead>
+        <th>Invoice Id</th>
+        <th>Billing Id</th>
+        <th>Invoice Date</th>
+        <th>Total Amount</th>
+        <th>Payment Status</th>
+        <th>Action</th>
+    </thead>
+
+    <tbody>                      
+        <tr *ngFor="let item of customerPendingBills">
+            
+            <td>{{item.invoiceid}}</td>
+            <td>{{item.billingid}}</td>
+            <td>{{item.invoicedate| date:'dd-MM-yyyy'}}</td>
+            <td>{{item.totalamt}}</td>
+            <td>{{item.paymentstatus}}</td>
+            <td><button (click)="pay()">pay bill</button></td>
+            
+    </tr>
+</tbody>        
+</table>  
+
+
+
+<br><br>
+
+<h2 style="text-align: center;">PAID BILLS</h2>
+
+<table class="table table-bordered table-hover">
+
+    <thead>
+        <th>Invoice Id</th>
+        <th>Billing Id</th>
+        <th>Invoice Date</th>
+        <th>Total Amount</th>
+        <th>Payment Status</th>
+    </thead>
+
+    <tbody>
+        <tr *ngFor="let item of customerPaidBills">
+            
+            <td>{{item.invoiceid}}</td>
+            <td>{{item.billingid}}</td>
+            <td>{{item.invoicedate| date:'dd-MM-yyyy'}}</td>
+            <td>{{item.totalamt}}</td>
+            <td>{{item.paymentstatus}}</td>
+            
+    </tr>
+</tbody>  
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
